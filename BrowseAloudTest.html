@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Browse Aloud Test</title>
+  </head>
+  <body>
+    <h1 id="baTitle" onclick="startBa()">Browse Aloud Test</h3>
+	<p>paragraph text..</p>
+	<p onclick="toggleBar()">paragraph text..</p>
+	<script type="text/javascript">
+		var _baTheme = 0,
+            _baMode = "Aktivera Talande Webb",
+            _baUseCookies = true,
+            _baHideOnLoad = true,
+			hasAddedBA = false;
+			
+		function addScript( src ) {
+		  var s = document.createElement( 'script' );
+		  s.setAttribute( 'type', "text/javascript" );
+		  s.setAttribute( 'src', src );
+		  document.body.appendChild( s );
+		}
+		function startBa(){
+			if(hasAddedBA){
+				return;
+			}
+			
+			addScript("//www.browsealoud.com/plus/scripts/ba.js");
+			hasAddedBA = true;
+		}
+	</script>
+  </body>
+</html>
